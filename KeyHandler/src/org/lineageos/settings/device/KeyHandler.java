@@ -99,24 +99,24 @@ public class KeyHandler implements DeviceKeyHandler {
                 Settings.Secure.USER_SETUP_COMPLETE, 0) != 0;
     }
 
-    public KeyEvent handleKeyEvent(KeyEvent event) {
+    public boolean handleKeyEvent(KeyEvent event) {
         int scanCode = event.getScanCode();
         String keyCode = Constants.sKeyMap.get(scanCode);
         int keyCodeValue = Constants.getPreferenceInt(mContext, keyCode);
 
         if (!hasSetupCompleted()) {
-            return event;
+            return false;
         }
 
         // We only want ACTION_UP event
         if (event.getAction() != KeyEvent.ACTION_UP) {
-            return null;
+            return true;
         }
 
         mAudioManager.setRingerModeInternal(sSupportedSliderRingModes.get(keyCodeValue));
         mNotificationManager.setZenMode(sSupportedSliderZenModes.get(keyCodeValue), null, TAG);
         doHapticFeedback();
-        return null;
+        return true;
     }
 
     private void doHapticFeedback() {
