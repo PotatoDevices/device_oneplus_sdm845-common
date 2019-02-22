@@ -60,8 +60,15 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio@2.0-service \
+    android.hardware.audio@4.0-impl \
+    android.hardware.audio.effect@2.0-impl \
+    android.hardware.audio.effect@4.0-impl \
+    android.hardware.soundtrigger@2.1-impl \
     audio.a2dp.default \
-    libaacwrapper
+    libaudio-resampler \
+    libstagefright_softomx
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
@@ -92,6 +99,11 @@ PRODUCT_PACKAGES += \
     libqti-perfd-client \
     libcvface_api
 
+# Context Hub
+PRODUCT_PACKAGES += \
+    android.hardware.contexthub@1.0-impl.generic \
+    android.hardware.contexthub@1.0-service
+
 # Common init scripts
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -117,6 +129,17 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libvulkan \
     vendor.display.config@1.0
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl:64 \
+    android.hardware.drm@1.0-service \
+    android.hardware.drm@1.3-service.clearkey
+
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl-qti \
+    android.hardware.health@2.1-service
 
 # Doze
 PRODUCT_PACKAGES += \
@@ -189,6 +212,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     RemovePackages
 
+# RenderScript
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
+
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
@@ -206,6 +238,20 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     tri-state-key_daemon
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0-impl \
+    android.hardware.thermal@1.0-service
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
+
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl \
+    android.hardware.vibrator@1.0-service
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
@@ -219,6 +265,10 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcutils-v29.so \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcutils-v29.so
+
+# Wifi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service
 
 # WiFi Display
 PRODUCT_PACKAGES += \
