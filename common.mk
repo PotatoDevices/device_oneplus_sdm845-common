@@ -88,6 +88,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    libbthost_if \
+    BluetoothQti
+
 # Camera
 PRODUCT_PACKAGES += \
     GoogleCamera \
