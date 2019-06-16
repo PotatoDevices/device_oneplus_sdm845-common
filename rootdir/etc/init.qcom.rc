@@ -23,9 +23,6 @@ on fs
     write /dev/stune/top-app/schedtune.sched_boost_no_override 0
 
 on boot
-    # Fingerprint
-    chown system system /sys/devices/platform/soc/soc:goodix_fp/proximity_state
-
     # Touchpanel
     chmod 0660 /proc/touchpanel/double_swipe_enable
     chmod 0660 /proc/touchpanel/down_arrow_enable
