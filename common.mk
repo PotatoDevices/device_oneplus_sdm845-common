@@ -96,7 +96,8 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     libbthost_if \
     libldacBT_dec \
-    BluetoothQti
+    BluetoothQti \
+    vendor.qti.hardware.bluetooth_audio@2.0.vendor
 
 # Camera
 PRODUCT_PACKAGES += \
