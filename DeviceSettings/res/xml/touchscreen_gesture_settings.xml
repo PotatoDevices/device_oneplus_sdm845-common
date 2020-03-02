@@ -21,5 +21,6 @@
         android:key="touchscreen_gesture_haptic_feedback"
         android:title="@string/touchscreen_gestures_haptic_feedback_title"
         android:summary="@string/touchscreen_gestures_haptic_feedback_summary"
+        android:icon="@drawable/ic_vibrate"
         android:defaultValue="true" />
 </PreferenceScreen>
