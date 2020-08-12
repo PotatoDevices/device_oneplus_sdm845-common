@@ -33,6 +33,7 @@
 #include <sys/_system_properties.h>
 #include <stdio.h>
 #include <sys/system_properties.h>
+#include <sys/sysinfo.h>
 
 #include "vendor_init.h"
 #include "property_service.h"
@@ -50,6 +51,28 @@ void property_override(char const prop[], char const value[])
 		__system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
+void load_dalvik_properties() {
+    struct sysinfo sys;
+
+    sysinfo(&sys);
+    if (sys.totalram < 6144ull * 1024 * 1024) {
+        // from - phone-xhdpi-6144-dalvik-heap.mk
+        property_override("dalvik.vm.heapstartsize", "16m");
+        property_override("dalvik.vm.heapgrowthlimit", "256m");
+        property_override("dalvik.vm.heapsize", "512m");
+        property_override("dalvik.vm.heapmaxfree", "32m");
+    } else {
+        // 8GB RAM
+        property_override("dalvik.vm.heapstartsize", "32m");
+        property_override("dalvik.vm.heapgrowthlimit", "512m");
+        property_override("dalvik.vm.heapsize", "768m");
+        property_override("dalvik.vm.heapmaxfree", "64m");
+    }
+
+    property_override("dalvik.vm.heaptargetutilization", "0.5");
+    property_override("dalvik.vm.heapminfree", "8m");
+}
+
 void property_override_dual(char const system_prop[], char const vendor_prop[], const char value[])
 {
 	property_override(system_prop, value);
@@ -59,4 +82,5 @@ void property_override_dual(char const system_prop[], char const vendor_prop[], 
 
 void vendor_load_properties()
 {
+    load_dalvik_properties();
 }
