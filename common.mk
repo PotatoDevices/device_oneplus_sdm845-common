@@ -66,6 +66,8 @@ PRODUCT_PACKAGES += \
 # AOSiP Device Settings
 #PRODUCT_PACKAGES += \
 #    DeviceSettings
+PRODUCT_PACKAGES += \
+    KeyHandler
 
 # Audio
 PRODUCT_PACKAGES += \
