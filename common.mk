@@ -152,8 +152,7 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0:64 \
     com.android.nfc_extras \
     Tag \
-    vendor.nxp.nxpese@1.0:64 \
-    vendor.nxp.nxpnfc@1.0:64
+    NfcNci
 
 # Power
 PRODUCT_PACKAGES += \
