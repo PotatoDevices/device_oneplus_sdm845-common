@@ -99,6 +99,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    libcvface_api \
     Snap
 
 # Common init scripts
