@@ -111,6 +111,7 @@ PRODUCT_PACKAGES += \
     libqti-perfd-client \
     libcvface_api \
     Snap \
+    libc++demangle_vendor \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     vendor.qti.hardware.camera.device@1.0.vendor
