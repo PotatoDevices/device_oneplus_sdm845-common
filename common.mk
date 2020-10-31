@@ -159,14 +159,14 @@ PRODUCT_PACKAGES += \
     libdisplayconfig \
     libqdMetaData \
     libqdMetaData.system \
-    libtinyxml \
     libdisplayconfig \
-    libqdMetaData \
-    libqdMetaData.system \
+    libdisplayconfig.vendor \
+    libdisplayconfig.qti \
     libvulkan \
     memtrack.sdm845 \
-    vendor.display.config@1.7 \
-    vendor.display.config@1.7.vendor \
+    vendor.display.config@2.0 \
+    vendor.display.config@2.0.vendor \
+    memtrack.sdm845 \
     vendor.qti.hardware.display.allocator@1.0-service
 
 # DRM
