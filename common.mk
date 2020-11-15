@@ -300,6 +300,7 @@ PRODUCT_COPY_FILES += \
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail \
+    libavservices_minijail.vendor \
     libmediaplayerservice \
     libc2dcolorconvert \
     libOmxAacEnc \
