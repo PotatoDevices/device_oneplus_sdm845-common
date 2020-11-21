@@ -284,6 +284,14 @@ PRODUCT_PACKAGES += \
     vendor.nxp.nxpnfc@1.0:64 \
     libchrome.vendor
 
+# OnePlus
+PRODUCT_PACKAGES += \
+    oneplus-fwk.oneplus_msmnile
+
+PRODUCT_BOOT_JARS += \
+    oneplus-fwk.oneplus_msmnile
+
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
