@@ -26,7 +26,6 @@ camera.disable_zsl_mode=true
 
 # CNE/DPM
 persist.vendor.cne.feature=1
-persist.vendor.dpm.feature=11
 persist.vendor.dpmhalservice.enable=1
 
 # Display
