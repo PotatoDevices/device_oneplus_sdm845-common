@@ -88,8 +88,20 @@ PRODUCT_PACKAGES += \
 
 # Common init scripts
 PRODUCT_PACKAGES += \
-    init.qcom.rc \
+    fstab.qcom \
+    init.class_main.sh \
+    init.qcom.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.sensors.sh \
+    init.qcom.usb.sh \
+    init.oem.rc \
+    init.target.rc \
+    init.custom.rc \
     init.recovery.qcom.rc \
+    init.msm.usb.configfs.rc \
+    init.qcom.rc \
+    init.qcom.usb.rc \
     ueventd.qcom.rc
 
 # Display
