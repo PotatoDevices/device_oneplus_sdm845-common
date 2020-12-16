@@ -168,11 +168,13 @@ PRODUCT_PACKAGES += \
     libdisplayconfig \
     libqdMetaData \
     libqdMetaData.system \
+    libtinyxml \
     libdisplayconfig \
     libdisplayconfig.vendor \
     libdisplayconfig.qti \
     libvulkan \
     memtrack.sdm845 \
+    vendor.display.config@1.0.vendor \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
     memtrack.sdm845 \
@@ -196,7 +198,8 @@ PRODUCT_PACKAGES += \
     libhidltransport \
     libhwbinder \
     libhidltransport.vendor \
-    libhwbinder.vendor
+    libhwbinder.vendor \
+    libmetricslogger
 
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
@@ -238,7 +241,8 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     Tag \
     vendor.nxp.nxpese@1.0:64 \
-    vendor.nxp.nxpnfc@1.0:64
+    vendor.nxp.nxpnfc@1.0:64 \
+    libchrome.vendor \
 
 # Protobuf
 PRODUCT_PACKAGES += \
