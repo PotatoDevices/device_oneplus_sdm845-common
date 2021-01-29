@@ -396,6 +396,10 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     tri-state-key_daemon
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0
+
 # Tethering
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay
