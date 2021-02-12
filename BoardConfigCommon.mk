@@ -70,6 +70,10 @@ BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := sdm845
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno630
 
+# Power
+TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
+TARGET_WLAN_POWER_STAT := "/sys/kernel/wlan/power_stats"
+
 # Properties
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
