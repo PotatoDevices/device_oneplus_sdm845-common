@@ -457,6 +457,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-wfd.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-wfd.xml
 
 # Namespace
+TARGET_USE_QTI_BT_STACK := true
 PRODUCT_BOARD_PLATFORM := sdm845
 PRODUCT_USES_QCOM_HARDWARE := true
 PRODUCT_SOONG_NAMESPACES += \
