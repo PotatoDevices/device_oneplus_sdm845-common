@@ -24,6 +24,10 @@ vendor.camera.aux.packagelist=com.android.camera,com.oneplus.camera
 # Boot
 sys.vendor.shutdown.waittime=500
 
+# Blur
+ro.surface_flinger.supports_background_blur=1
+ro.sf.blurs_are_expensive=1
+
 # CNE/DPM
 persist.vendor.cne.feature=1
 persist.vendor.dpmhalservice.enable=1
