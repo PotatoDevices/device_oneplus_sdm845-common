@@ -50,6 +50,9 @@ debug.cpurend.vsync=false
 # OTG
 persist.sys.oem.otg_support=true
 
+# NotchCity
+ro.potato.has_cutout=true
+
 # Media
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
