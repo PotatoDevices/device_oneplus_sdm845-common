@@ -140,8 +140,3 @@ on property:vendor.post_boot.parsed=1
 
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
-
-service dashd /system/bin/dashd
-    class core
-    critical
-    group root system
